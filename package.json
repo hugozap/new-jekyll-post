@@ -1,7 +1,7 @@
 {
   "name": "new-jekyll-post",
   "version": "1.0.0",
-  "description": "Create a new jekyll post and launch default editor",
+  "description": "Creates a new jekyll post and launch default editor",
   "bin": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,10 @@
   "keywords": [
     "jekyll"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugozap/new-jekyll-post.git"
+  },
   "author": "hugozap",
   "license": "MIT",
   "dependencies": {
