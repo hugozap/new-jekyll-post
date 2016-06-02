@@ -1,6 +1,6 @@
 {
   "name": "new-jekyll-post",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a new jekyll post and launch default editor",
   "bin": "bin/index.js",
   "scripts": {
