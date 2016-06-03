@@ -41,7 +41,7 @@ prompt('Post Title:', function(val){
 function createPost(title, category, tags, published) {
 
         var now = new Date()
-        var postdesc = title.toLowerCase().replace(/[^a-zA-Z\d\s:]/, '').replac
+        var postdesc = title.toLowerCase().replace(/[^a-zA-Z\d\s:]/g, '').substr(0,20).replace(/\s/g,'-')
         var year = now.getFullYear()
         var month = now.getMonth()+1
         var day = now.getDate()
