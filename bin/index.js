@@ -38,6 +38,36 @@ prompt('Post Title:', function(val){
 	})
 })
 
+function createPost(title, category, tags, published) {
+
+        var now = new Date()
+        var postdesc = title.toLowerCase().replace(/[^a-zA-Z\d\s:]/, '').replac
+        var year = now.getFullYear()
+        var month = now.getMonth()+1
+        var day = now.getDate()
+
+        var filename = `${year}-${month}-${day}-${postdesc}.md`
+
+        var filepath = path.join(folder,filename)
+
+        //Include the Jekyll bootstrap include call if --jb paramater exists.
+        var additionalContent = argv.jb?`{% include JB/setup %}`:''
+        var header = `---
+title: ${title}
+layout: post
+category : ${category}
+tags : [${tags.join(',')}]
+published: ${published.toString()}
+---
+${additionalContent}
+        `
+        fs.writeFileSync(filepath, header)
+        console.log(filepath)
+        opn(filepath)
+}
+
+
+
 
 
 
