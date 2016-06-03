@@ -1,6 +1,6 @@
 {
   "name": "new-jekyll-post",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Creates a new jekyll post and launch default editor",
   "bin": "bin/index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "cli-prompt": "^0.5.1",
+    "left-pad": "^1.1.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "opn": "^4.0.2",

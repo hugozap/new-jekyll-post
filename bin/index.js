@@ -7,6 +7,7 @@ var path = require('path')
 var mkdirp  = require('mkdirp')
 var opn = require('opn')
 var argv = require('minimist')(process.argv.slice(2));
+var leftPad = require('left-pad')
 
 var jekyllpath = process.env.JEKYLLPATH
 
@@ -43,8 +44,8 @@ function createPost(title, category, tags, published) {
         var now = new Date()
         var postdesc = title.toLowerCase().replace(/[^a-zA-Z\d\s:]/g, '').substr(0,20).replace(/\s/g,'-')
         var year = now.getFullYear()
-        var month = now.getMonth()+1
-        var day = now.getDate()
+        var month = leftPad(now.getMonth()+1,2,0)
+        var day = leftPad(now.getDate(),2,0)
 
         var filename = `${year}-${month}-${day}-${postdesc}.md`
 
